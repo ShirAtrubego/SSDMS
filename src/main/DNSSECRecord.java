@@ -14,19 +14,21 @@ public class DNSSECRecord {
     private int type = 1;
     private int dclass = 1;
 
-    public AbstractMessage checkDNSSEC(String hostname, int type) throws IOException {
+    public AbstractMessage getDNSSECRecord(String hostname, int type) throws IOException {
         disableWarning();
 
         SimpleResolver res = new SimpleResolver();
-        //TestingResolver res = new TestingResolver();
+        //TestingResolver resTest = new TestingResolver();
 
         name = Name.fromString(hostname, Name.root);
         res.setEDNS(0, 0, 32768, null);
-        Record rec = Record.newRecord(name, type, dclass);
-        AbstractMessage query = new DNSMessage(Message.newQuery(rec));
+        Record dnssecKey = Record.newRecord(name, type, dclass);
+        AbstractMessage queryDNSSEC = new DNSMessage(Message.newQuery(dnssecKey));
 
-        //Message response = res.send(query, type, hostname);
-        return new DNSMessage( res.send(query.toXbillMessage()) );
+        //Message responseDNSSECTest = res.send(query, type, hostname);
+        AbstractMessage responseDNSSEC = new DNSMessage( res.send(queryDNSSEC.toXbillMessage()) );
+
+        return responseDNSSEC;
 
     }
 

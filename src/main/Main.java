@@ -1,12 +1,15 @@
 package main;
 
+import org.xbill.DNS.DNSSEC;
 import org.xbill.DNS.Message;
+
+import java.io.IOException;
 //import securitycheck.CertificateWebServer;
 //import securitycheck.TLSARecord;
 
 public class Main {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) throws IOException, DNSSEC.DNSSECException {
 
         String hostHuque = "huque.com"; //bonuscard, mail.de, sasis.ch, bonus-services-test.ch, hin.ch, prisma-world.com, securitymonitoring.chm, huque.com
         String hostWeber = "weberdns.de";
@@ -31,11 +34,19 @@ public class Main {
 
         System.out.println(lines + hostWeber + lines);
         System.out.println(lines + "DNSSEC Query" + lines);
-        AbstractMessage firstDnsSecMessage = dnsSec.checkDNSSEC(hostWeber, first);
+        AbstractMessage firstDnsSecMessage = dnsSec.getDNSSECRecord(hostWeber, first);
         dnsSec.printDNSSECRecordSections(firstDnsSecMessage);
         System.out.println();
         System.out.println(lines + "DNSKEY Query" + lines);
-        AbstractMessage secondtDnsSecMessage = dnsSec.checkDNSSEC(hostWeber, second);
-        dnsSec.printDNSSECRecordSections(secondtDnsSecMessage);
+        AbstractMessage secondDnsSecMessage = dnsSec.getDNSSECRecord(hostWeber, second);
+        dnsSec.printDNSSECRecordSections(secondDnsSecMessage);
+
+
+        CAARecord caaRecord = new CAARecord();
+
+        AbstractMessage caaRecordMessage = caaRecord.getCAARecord(hostWeber);
+        System.out.println(lines + hostWeber + lines);
+        caaRecord.printCAASections(caaRecordMessage);
+
     }
 }
