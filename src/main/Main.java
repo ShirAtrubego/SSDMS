@@ -1,11 +1,9 @@
 package main;
 
-import org.xbill.DNS.DNSSEC;
-import org.xbill.DNS.Message;
+import org.xbill.DNS.*;
 
 import java.io.IOException;
-//import securitycheck.CertificateWebServer;
-//import securitycheck.TLSARecord;
+
 
 public class Main {
 
@@ -47,6 +45,14 @@ public class Main {
         AbstractMessage caaRecordMessage = caaRecord.getCAARecord(hostWeber);
         System.out.println(lines + hostWeber + lines);
         caaRecord.printCAASections(caaRecordMessage);
+
+        TLSARecord tlsa = new TLSARecord();
+
+        System.out.println(lines+ hostWeber + lines);
+
+        tlsa.convertToMXRecord(hostWeber);
+        tlsa.checkTLSAFQDN(hostWeber);
+        tlsa.printTLSAMxRecord(hostWeber);
 
     }
 }
