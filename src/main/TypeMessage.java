@@ -2,10 +2,10 @@ package main;
 
 import org.xbill.DNS.*;
 
-public class DNSMessage implements AbstractMessage {
+public class TypeMessage implements InterfaceMessage {
     private Message internalMessage;
 
-    DNSMessage(Message message){
+    TypeMessage(Message message){
         internalMessage = message;
     }
 

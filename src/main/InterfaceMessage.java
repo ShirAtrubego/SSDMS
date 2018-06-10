@@ -2,7 +2,7 @@ package main;
 
 import org.xbill.DNS.*;
 
-public interface AbstractMessage {
+public interface InterfaceMessage {
 
     /**
      * Replaces the Header with a new one.

@@ -1,7 +1,7 @@
 package main;
 
-//import AbstractMessage;
-//import main.DNSMessage;
+//import InterfaceMessage;
+//import main.TypeMessage;
 import org.xbill.DNS.*;
 //import testing.TestingResolver;
 
@@ -12,7 +12,7 @@ public class TLSARecord {
     private int type = 1;
     private int dclass = 1;
 
-    public AbstractMessage checkTLSA(String hostname) throws IOException {
+    public InterfaceMessage checkTLSA(String hostname) throws IOException {
         disableWarning();
 
         SimpleResolver res = new SimpleResolver();
@@ -22,15 +22,15 @@ public class TLSARecord {
         type = 52;
         dclass = 1;
         Record tlsaKey = Record.newRecord(name, type, dclass);
-        AbstractMessage queryTLSA = new DNSMessage(Message.newQuery(tlsaKey));
+        InterfaceMessage queryTLSA = new TypeMessage(Message.newQuery(tlsaKey));
 
         //Message responseTLSATest = res.send(querytlsa);
-        AbstractMessage responseTLSA = new DNSMessage(res.send(queryTLSA.toXbillMessage()));
+        InterfaceMessage responseTLSA = new TypeMessage(res.send(queryTLSA.toXbillMessage()));
 
         return responseTLSA;
     }
 
-    private void printSections(AbstractMessage message) {
+    private void printSections(InterfaceMessage message) {
         System.out.println("-------------------------------------------------------TLSA Query-------------------------------------------------------");
         Record[] sect1 = message.getSectionArray(1);
         if (null != sect1) {
@@ -139,7 +139,7 @@ public class TLSARecord {
         checkTLSA(target587);
     }
 
-    public AbstractMessage checkTLSAFQDN (String hostname) throws IOException {
+    public InterfaceMessage checkTLSAFQDN (String hostname) throws IOException {
         String target = "_443._tcp.";
         target += hostname;
         return checkTLSA(target);

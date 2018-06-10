@@ -12,7 +12,7 @@ public class CAARecord {
     private int dclass = 1;
 
 
-    public AbstractMessage getCAARecord(String hostname) throws IOException {
+    public InterfaceMessage getCAARecord(String hostname) throws IOException {
         disableWarning();
 
         SimpleResolver res = new SimpleResolver();
@@ -22,15 +22,15 @@ public class CAARecord {
         type = 257;
         dclass = 1;
         Record caaKey = Record.newRecord(name, type, dclass);
-        AbstractMessage queryCAA = new DNSMessage(Message.newQuery(caaKey));
+        InterfaceMessage queryCAA = new TypeMessage(Message.newQuery(caaKey));
 
         //Message responseCAATest = res.send(queryCAA);
-        AbstractMessage responseCAA = new DNSMessage( res.send(queryCAA.toXbillMessage()) );
+        InterfaceMessage responseCAA = new TypeMessage( res.send(queryCAA.toXbillMessage()) );
 
         return responseCAA;
     }
 
-    public void printCAASections(AbstractMessage message){
+    public void printCAASections(InterfaceMessage message){
         System.out.println("-------------------------------------------------------CAA Query-------------------------------------------------------");
         Record[] sect1 = message.getSectionArray(1);if(null != sect1){
             for(int i = 0; i < sect1.length; i++){

@@ -6,7 +6,6 @@ import java.io.IOException;
 import java.security.interfaces.DSAPublicKey;
 import java.security.interfaces.ECPublicKey;
 import java.security.interfaces.RSAPublicKey;
-import java.util.List;
 
 public class DNSSECRecord {
 
@@ -14,7 +13,7 @@ public class DNSSECRecord {
     private int type = 1;
     private int dclass = 1;
 
-    public AbstractMessage getDNSSECRecord(String hostname, int type) throws IOException {
+    public InterfaceMessage getDNSSECRecord(String hostname, int type) throws IOException {
         disableWarning();
 
         SimpleResolver res = new SimpleResolver();
@@ -23,16 +22,16 @@ public class DNSSECRecord {
         name = Name.fromString(hostname, Name.root);
         res.setEDNS(0, 0, 32768, null);
         Record dnssecKey = Record.newRecord(name, type, dclass);
-        AbstractMessage queryDNSSEC = new DNSMessage(Message.newQuery(dnssecKey));
+        InterfaceMessage queryDNSSEC = new TypeMessage(Message.newQuery(dnssecKey));
 
         //Message responseDNSSECTest = res.send(query, type, hostname);
-        AbstractMessage responseDNSSEC = new DNSMessage( res.send(queryDNSSEC.toXbillMessage()) );
+        InterfaceMessage responseDNSSEC = new TypeMessage( res.send(queryDNSSEC.toXbillMessage()) );
 
         return responseDNSSEC;
 
     }
 
-    private void printSecurityRating(AbstractMessage response) throws DNSSEC.DNSSECException {
+    private void printSecurityRating(InterfaceMessage response) throws DNSSEC.DNSSECException {
         Record[] sect1 = response.getSectionArray(1);
         if (null != sect1) {
             for (Record r : sect1) {
@@ -182,7 +181,7 @@ public class DNSSECRecord {
         }
     }
 
-    public void printDNSSECRecordSections(AbstractMessage message) throws DNSSEC.DNSSECException {
+    public void printDNSSECRecordSections(InterfaceMessage message) throws DNSSEC.DNSSECException {
         Record[] sect1 = message.getSectionArray(1);if(null != sect1){
             for(int i = 0; i < sect1.length; i++){
                 Record r = sect1[i];

@@ -32,17 +32,17 @@ public class Main {
 
         System.out.println(lines + hostWeber + lines);
         System.out.println(lines + "DNSSEC Query" + lines);
-        AbstractMessage firstDnsSecMessage = dnsSec.getDNSSECRecord(hostWeber, first);
+        InterfaceMessage firstDnsSecMessage = dnsSec.getDNSSECRecord(hostWeber, first);
         dnsSec.printDNSSECRecordSections(firstDnsSecMessage);
         System.out.println();
         System.out.println(lines + "DNSKEY Query" + lines);
-        AbstractMessage secondDnsSecMessage = dnsSec.getDNSSECRecord(hostWeber, second);
+        InterfaceMessage secondDnsSecMessage = dnsSec.getDNSSECRecord(hostWeber, second);
         dnsSec.printDNSSECRecordSections(secondDnsSecMessage);
 
 
         CAARecord caaRecord = new CAARecord();
 
-        AbstractMessage caaRecordMessage = caaRecord.getCAARecord(hostWeber);
+        InterfaceMessage caaRecordMessage = caaRecord.getCAARecord(hostWeber);
         System.out.println(lines + hostWeber + lines);
         caaRecord.printCAASections(caaRecordMessage);
 
