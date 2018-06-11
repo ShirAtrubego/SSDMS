@@ -1,11 +1,11 @@
-package main;
+package SingeObjects;
 
 import org.xbill.DNS.*;
 
 public class TypeMessage implements InterfaceMessage {
     private Message internalMessage;
 
-    TypeMessage(Message message){
+    public TypeMessage(Message message){
         internalMessage = message;
     }
 

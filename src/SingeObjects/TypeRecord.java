@@ -1,4 +1,4 @@
-package main;
+package SingeObjects;
 
 import org.xbill.DNS.Name;
 import org.xbill.DNS.Record;

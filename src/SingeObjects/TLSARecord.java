@@ -1,7 +1,7 @@
-package main;
+package SingeObjects;
 
 //import InterfaceMessage;
-//import main.TypeMessage;
+//import SingeObjects.TypeMessage;
 import org.xbill.DNS.*;
 //import testing.TestingResolver;
 

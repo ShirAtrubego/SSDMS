@@ -1,4 +1,4 @@
-package main;
+package SingeObjects;
 
 import org.xbill.DNS.Compression;
 import org.xbill.DNS.DNAMERecord;
