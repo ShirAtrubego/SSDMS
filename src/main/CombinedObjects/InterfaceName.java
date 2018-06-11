@@ -1,11 +1,9 @@
-package SingeObjects;
+package main.CombinedObjects;
 
-import org.xbill.DNS.Compression;
-import org.xbill.DNS.DNAMERecord;
-import org.xbill.DNS.DNSOutput;
-import org.xbill.DNS.NameTooLongException;
+import org.xbill.DNS.*;
 
 public interface InterfaceName {
+        Name root = null;
 
 /*
 
@@ -33,6 +31,16 @@ public interface InterfaceName {
         //       static org.xbill.DNS.Name fromConstantString(String s);
 
 //       public static org.xbill.DNS.Name concatenate(org.xbill.DNS.Name prefix, org.xbill.DNS.Name suffix);
+
+        static Name
+        fromString(String s, Name origin) throws TextParseException {
+                if (s.equals("@") && origin != null)
+                        return origin;
+                else if (s.equals("."))
+                        return (root);
+
+                return new Name(s, origin);
+        }
 
         org.xbill.DNS.Name relativize(org.xbill.DNS.Name origin);
 

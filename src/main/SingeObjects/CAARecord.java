@@ -1,4 +1,4 @@
-package SingeObjects;
+package main.SingeObjects;
 
 import org.xbill.DNS.*;
 //import testing.TestingResolver;

@@ -1,4 +1,4 @@
-package SingeObjects;
+package main.CombinedObjects;
 
 import org.xbill.DNS.*;
 

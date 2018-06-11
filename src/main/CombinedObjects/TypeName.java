@@ -1,10 +1,18 @@
-package SingeObjects;
+package main.CombinedObjects;
 
 import org.xbill.DNS.*;
 
 public class TypeName implements InterfaceName{
 
         private Name internalName;
+
+    public static Name
+    fromString(String s, Name origin) throws TextParseException {if (s.equals("@") && origin != null)
+        return origin;
+    else if (s.equals("."))
+        return (root);
+
+        return new Name(s, origin);}
 
         public TypeName (Name name){
             internalName = name;
