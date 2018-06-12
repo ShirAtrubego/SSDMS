@@ -4,8 +4,6 @@ import main.CombinedObjects.*;
 import org.apache.commons.io.FileUtils;
 import org.junit.*;
 import org.xbill.DNS.DNSSEC;
-import org.xbill.DNS.Message;
-import org.xbill.DNS.Record;
 
 import java.io.File;
 import java.io.IOException;
@@ -14,9 +12,19 @@ import static org.junit.Assert.*;
 
 public class JUniTestClass {
 
-    String hostName = "mail.weberdns.de";
+    String mailHostName = "mail.weberdns.de";
+    String hostName = "weberdns.de";
+    String hostnNameInvalid, mailHostNameInvalid = "OneRing";
+
+
     int type1 = 1;
     int type48 = 48;
+    int typeInvalid, portInvalid = 42;
+
+    int port25 = 25;
+    int port443 = 443;
+    int port465 = 465;
+    int port587 = 587;
 
     @BeforeClass
     // runs only once, MUST be static
@@ -37,16 +45,118 @@ public class JUniTestClass {
         assertEquals(false, ich.checkTransparency());
     }
 
+    /* Testing CombindedObjects.SecurityCheck.java
+    *
+    *
+     */
     @Test
     public void checkType1Test() throws IOException, DNSSEC.DNSSECException {
-        SecurityCheck checkTest1 = new SecurityCheck(hostName);
-        assertEquals("src/test/testCombinedObjects/dnssecResponse/weberdns1.txt",checkTest1.check(hostName, type1) );
+        SecurityCheck checkTest1 = new SecurityCheck(mailHostName);
+        assertEquals("Match",  FileUtils.readFileToString(new File("src/test/testCombinedObjects/dnssecResponse/webermxdns1.txt"),
+                "utf-8"),checkTest1.check(mailHostName, type1) );
     }
 
     @Test
     public void checkType48Test() throws IOException, DNSSEC.DNSSECException {
-        SecurityCheck checkTest48 = new SecurityCheck(hostName);
-        assertEquals("Match",  FileUtils.readFileToString(new File("src/test/testCombinedObjects/dnssecResponse/webermxdns48.txt"), "utf-8"), checkTest48.check(hostName, type48));
+        SecurityCheck checkTest48 = new SecurityCheck(mailHostName);
+        assertEquals("Match",  FileUtils.readFileToString(new File("src/test/testCombinedObjects/dnssecResponse/webermxdns48.txt"),
+                "utf-8"), checkTest48.check(mailHostName, type48));
+    }
+
+    /* Testing CombindedObjects.SSDMS.java
+    *
+    *
+     */
+    @Test
+    public void getSecurityResponseType1ValidTest() throws IOException, DNSSEC.DNSSECException {
+        SSDMS getDNSSECTest = new SSDMS();
+        getDNSSECTest.getSecurityResponse(mailHostName, type1);
+    }
+
+    @Test
+    public void getSecurityResponseType1InValidTest() throws IOException, DNSSEC.DNSSECException {
+        SSDMS getDNSSECTest = new SSDMS();
+        getDNSSECTest.getSecurityResponse(mailHostName, typeInvalid);
+    }
+
+    @Test
+    public void getSecurityResponseType48TValidest() throws IOException, DNSSEC.DNSSECException {
+        SSDMS getDNSSECTest = new SSDMS();
+        getDNSSECTest.getSecurityResponse(mailHostName, type48);
+    }
+
+    @Test
+    public void getSecurityResponseType48InTValidest() throws IOException, DNSSEC.DNSSECException {
+        SSDMS getDNSSECTest = new SSDMS();
+        getDNSSECTest.getSecurityResponse(mailHostName, typeInvalid);
+    }
+
+    @Test
+    public void getConvertedMXValidTest() throws IOException {
+        SSDMS getMX = new SSDMS();
+        getMX.getConvertedMX(hostName);
+    }
+
+    @Test
+    public void getConvertedMXInValidTest() throws IOException {
+        SSDMS getMX = new SSDMS();
+        getMX.getConvertedMX(hostnNameInvalid);
+    }
+/*
+    @Test
+    public void printInformationTest() throws DNSSEC.DNSSECException {
+    }
+*/
+    @Test
+    public void getTLSAString25Test() {
+        SSDMS getTLSA = new SSDMS();
+        getTLSA.getTLSAString(mailHostName, hostName, port25);
+    }
+
+    @Test
+    public void getTLSAString2443est() {
+        SSDMS getTLSA = new SSDMS();
+        getTLSA.getTLSAString(mailHostName, hostName, port443);
+    }
+
+    @Test
+    public void getTLSAString465Test() {
+        SSDMS getTLSA = new SSDMS();
+        getTLSA.getTLSAString(mailHostName, hostName, port465);
+    }
+
+    @Test
+    public void getTLSAString587Test() {
+        SSDMS getTLSA = new SSDMS();
+        getTLSA.getTLSAString(mailHostName, hostName, port587);
+    }
+
+    @Test
+    public void getTLSAStringInvalidPortTest() {
+        SSDMS getTLSA = new SSDMS();
+        getTLSA.getTLSAString(mailHostName, hostName, portInvalid);
+    }
+
+    @Test
+    public void getTLSAStringInvalidHostNameTest() {
+        SSDMS getTLSA = new SSDMS();
+        getTLSA.getTLSAString(mailHostName, hostnNameInvalid, port25);
+    }
+
+    @Test
+    public void getTLSAStringInvalidMailHostTest() {
+        SSDMS getTLSA = new SSDMS();
+        getTLSA.getTLSAString(mailHostNameInvalid, hostName, port25);
+    }
+
+    @Test
+    public void getCertificateCheckTest() throws IOException {
+
+    }
+
+    @Test
+    public void getAllCertificatesTest() throws Exception {
+
     }
 
 

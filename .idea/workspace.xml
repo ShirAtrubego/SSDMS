@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42e0904c-e27a-4024-866a-7a7ab944c354" name="Default" comment="Testing, 2">
+    <list default="true" id="42e0904c-e27a-4024-866a-7a7ab944c354" name="Default" comment="Testing, 3">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/SSDMS.iml" afterPath="$PROJECT_DIR$/SSDMS.iml" />
-      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java" />
       <change beforePath="$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,102 +14,60 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="74" column="43" lean-forward="true" selection-start-line="74" selection-start-column="43" selection-end-line="74" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InterfaceName.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceName.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SecurityCheck.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="21" column="81" lean-forward="false" selection-start-line="21" selection-start-column="81" selection-end-line="21" selection-end-column="81" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CertificateTransparencyAll.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="493">
-              <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ConvertToMX.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="30" column="1" lean-forward="false" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JUniTestClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CertificateTransparencyCheck.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="816">
-              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PrintInformation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1105">
-              <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="SSDMS.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <splitter split-orientation="horizontal" split-proportion="0.5">
+      <split-first>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+          <file leaf-file-name="JUniTestClass.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="189">
+                  <caret line="157" column="48" lean-forward="false" selection-start-line="157" selection-start-column="48" selection-end-line="157" selection-end-column="48" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SSDMS.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="357">
+                  <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-first>
+      <split-second>
+        <leaf>
+          <file leaf-file-name="SSDMS.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="172">
+                  <caret line="28" column="16" lean-forward="false" selection-start-line="28" selection-start-column="16" selection-end-line="28" selection-end-column="16" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PrintInformation.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="-68">
+                  <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+        </leaf>
+      </split-second>
+    </splitter>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -140,7 +95,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/SSDMS.iml" />
-        <option value="$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java" />
         <option value="$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java" />
         <option value="$PROJECT_DIR$/src/main/SingeObjects/Main.java" />
         <option value="$PROJECT_DIR$/src/main/CombinedObjects/Main.java" />
@@ -152,6 +106,7 @@
         <option value="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java" />
         <option value="$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java" />
         <option value="$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java" />
+        <option value="$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java" />
       </list>
     </option>
   </component>
@@ -223,6 +178,14 @@
             </path>
             <path>
               <item name="SSDMS" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SSDMS" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="testCombinedObjects" type="462c0819:PsiDirectoryNode" />
+              <item name="dnssecResponse" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SSDMS" type="b2602c69:ProjectViewProjectNode" />
               <item name="External Libraries" type="cb654da1:ExternalLibrariesNode" />
             </path>
           </expand>
@@ -263,7 +226,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="JUnit.JUniTestClass">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -467,9 +430,9 @@
     </list>
     <recent_temporary>
       <list size="5">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="Application.Main (1)" />
-        <item index="2" class="java.lang.String" itemvalue="JUnit.JUniTestClass" />
+        <item index="0" class="java.lang.String" itemvalue="JUnit.JUniTestClass" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
+        <item index="2" class="java.lang.String" itemvalue="Application.Main (1)" />
         <item index="3" class="java.lang.String" itemvalue="JUnit.JUniTestClass.myTest" />
         <item index="4" class="java.lang.String" itemvalue="JUnit.JUniTestClass.BeforeClass" />
       </list>
@@ -494,7 +457,7 @@
       <option name="presentableId" value="Default" />
       <updated>1528745285432</updated>
       <workItem from="1528745286711" duration="7974000" />
-      <workItem from="1528826090721" duration="178000" />
+      <workItem from="1528826090721" duration="2103000" />
     </task>
     <task id="LOCAL-00001" summary="Testing, 1">
       <created>1528751283439</created>
@@ -503,13 +466,17 @@
       <option name="project" value="LOCAL" />
       <updated>1528751283439</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Testing, 2">
+      <created>1528826277687</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1528826277687</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="JUniTestClass - 2018.06.11 at 21h 39m 26s.xml">
-      <configuration name="JUniTestClass" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="JUniTestClass - 2018.06.11 at 21h 41m 57s.xml">
       <configuration name="JUniTestClass" configurationId="JUnit" />
     </history-entry>
@@ -531,6 +498,9 @@
     <history-entry file="JUniTestClass - 2018.06.12 at 19h 55m 36s.xml">
       <configuration name="JUniTestClass" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="JUniTestClass - 2018.06.12 at 19h 59m 13s.xml">
+      <configuration name="JUniTestClass" configurationId="JUnit" />
+    </history-entry>
     <history-entry file="JUniTestClass_BeforeClass - 2018.06.11 at 21h 40m 19s.xml">
       <configuration name="JUniTestClass.BeforeClass" configurationId="JUnit" />
     </history-entry>
@@ -539,7 +509,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="8152000" />
+    <option name="totallyTimeSpent" value="10077000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -584,7 +554,8 @@
     <MESSAGE value="Testing, 1" />
     <MESSAGE value="refactored code" />
     <MESSAGE value="Testing, 2" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing, 2" />
+    <MESSAGE value="Testing, 3" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing, 3" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -826,24 +797,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="46" lean-forward="false" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -876,14 +829,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="48" column="8" lean-forward="false" selection-start-line="48" selection-start-column="8" selection-end-line="48" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="212">
@@ -891,6 +836,32 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-68">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="21" column="0" lean-forward="true" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="157" column="48" lean-forward="false" selection-start-line="157" selection-start-column="48" selection-end-line="157" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
