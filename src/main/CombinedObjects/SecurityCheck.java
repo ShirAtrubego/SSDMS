@@ -2,8 +2,6 @@ package main.CombinedObjects;
 
 import org.xbill.DNS.*;
 import test.testCombinedObjects.TestingResolver;
-//import testing.TestingResolver;
-
 import java.io.IOException;
 import java.util.List;
 
@@ -32,5 +30,4 @@ public class SecurityCheck {
         //InterfaceMessage response = new TypeMessage(res.send(query));
         return response;
     }
-
 }

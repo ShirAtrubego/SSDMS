@@ -4,10 +4,16 @@ import main.CombinedObjects.*;
 import org.apache.commons.io.FileUtils;
 import org.junit.*;
 import org.xbill.DNS.DNSSEC;
+import sun.nio.cs.UTF_32;
 
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 
+import static java.nio.charset.StandardCharsets.*;
 import static org.junit.Assert.*;
 
 public class JUniTestClass {
@@ -52,8 +58,10 @@ public class JUniTestClass {
     @Test
     public void checkType1Test() throws IOException, DNSSEC.DNSSECException {
         SecurityCheck checkTest1 = new SecurityCheck(mailHostName);
-        assertEquals("Match",  FileUtils.readFileToString(new File("src/test/testCombinedObjects/dnssecResponse/webermxdns1.txt"),
-                "utf-8"),checkTest1.check(mailHostName, type1) );
+        assertEquals("Match",  Files.readAllLines(Paths.get("src/test/testCombinedObjects/dnssecResponse/webermxdns1.txt"), US_ASCII),
+                checkTest1.check(mailHostName, type1) );
+//        assertEquals(new FileReader("src/test/testCombinedObjects/dnssecResponse/webermxdns1.txt"),
+//                checkTest1.check(mailHostName, type1));
     }
 
     @Test

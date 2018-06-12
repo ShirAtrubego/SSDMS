@@ -96,7 +96,7 @@ public class TestingResolver {
     }
 
     public void setEDNS(int level) {
-        this.setEDNS(level, 0, 0, null);
+        this.setEDNS(level, 0, 0, (List) null);
     }
 
     public void setTSIGKey(TSIG key) {
@@ -208,7 +208,7 @@ public class TestingResolver {
         query = (Message) query.clone();
         this.applyEDNS(query);
         if (this.tsig != null) {
-            this.tsig.apply(query, null);
+            this.tsig.apply(query, (TSIGRecord) null);
         }
 
         byte[] out = query.toWire(65535);
@@ -254,122 +254,123 @@ public class TestingResolver {
         return null;
     }
 
-        public Object sendAsync(Message query, ResolverListener listener) {
-            Integer id;
-            synchronized(this) {
-                id = uniqueID++;
-            }
-
-            Record question = query.getQuestion();
-            String qname;
-            if (question != null) {
-                qname = question.getName().toString();
-            } else {
-                qname = "(none)";
-            }
-
-            String name = this.getClass() + ": " + qname;
-            return id;
+    public Object sendAsync(Message query, ResolverListener listener) {
+        Integer id;
+        synchronized(this) {
+            id = new Integer(uniqueID++);
         }
 
-        private Message sendAXFR(Message query) throws IOException {
-            Name qname = query.getQuestion().getName();
-            ZoneTransferIn xfrin = ZoneTransferIn.newAXFR(qname, this.address, this.tsig);
-            xfrin.setTimeout((int)(this.getTimeout() / 1000L));
-            xfrin.setLocalAddress(this.localAddress);
-
-            try {
-                xfrin.run();
-            } catch (ZoneTransferException var7) {
-                throw new WireParseException(var7.getMessage());
-            }
-
-            List records = xfrin.getAXFR();
-            Message response = new Message(query.getHeader().getID());
-            response.getHeader().setFlag(5);
-            response.getHeader().setFlag(0);
-            response.addRecord(query.getQuestion(), 0);
-
-            for (Object record : records) {
-                response.addRecord((Record) record, 1);
-            }
-
-            return response;
+        Record question = query.getQuestion();
+        String qname;
+        if (question != null) {
+            qname = question.getName().toString();
+        } else {
+            qname = "(none)";
         }
 
-        public Message readMessage(Reader in) throws IOException {
-            BufferedReader r;
-            if (in instanceof BufferedReader) {
-                r = (BufferedReader)in;
+        String name = this.getClass() + ": " + qname;
+        return id;
+    }
+
+    private Message sendAXFR(Message query) throws IOException {
+        Name qname = query.getQuestion().getName();
+        ZoneTransferIn xfrin = ZoneTransferIn.newAXFR(qname, this.address, this.tsig);
+        xfrin.setTimeout((int)(this.getTimeout() / 1000L));
+        xfrin.setLocalAddress(this.localAddress);
+
+        try {
+            xfrin.run();
+        } catch (ZoneTransferException var7) {
+            throw new WireParseException(var7.getMessage());
+        }
+
+        List records = xfrin.getAXFR();
+        Message response = new Message(query.getHeader().getID());
+        response.getHeader().setFlag(5);
+        response.getHeader().setFlag(0);
+        response.addRecord(query.getQuestion(), 0);
+        Iterator it = records.iterator();
+
+        while(it.hasNext()) {
+            response.addRecord((Record)it.next(), 1);
+        }
+
+        return response;
+    }
+
+    public Message readMessage(Reader in) throws IOException {
+        BufferedReader r;
+        if (in instanceof BufferedReader) {
+            r = (BufferedReader)in;
+        }
+        else {
+            r = new BufferedReader(in);
+        }
+
+        Message m = null;
+        String line = null;
+        int section = 103;
+        while ((line = r.readLine()) != null) {
+            String[] data;
+            if (line.startsWith(";; ->>HEADER<<- ")) {
+                section = 101;
+                m = new Message();
             }
-            else {
-                r = new BufferedReader(in);
+            else if (line.startsWith(";; QUESTIONS:")) {
+                section = 102;
+            }
+            else if (line.startsWith(";; ANSWERS:")) {
+                section = Section.ANSWER;
+                line = r.readLine();
+            }
+            else if (line.startsWith(";; AUTHORITY RECORDS:")) {
+                section = Section.AUTHORITY;
+                line = r.readLine();
+            }
+            else if (line.startsWith(";; ADDITIONAL RECORDS:")) {
+                section = 100;
+            }
+            else if (line.startsWith("####")) {
+                return m;
+            }
+            else if (line.startsWith("#")) {
+                continue;
             }
 
-            Message m = null;
-            String line;
-            int section = 103;
-            while ((line = r.readLine()) != null) {
-                String[] data;
-                if (line.startsWith(";; ->>HEADER<<- ")) {
-                    section = 101;
-                    m = new Message();
-                }
-                else if (line.startsWith(";; QUESTIONS:")) {
-                    section = 102;
-                }
-                else if (line.startsWith(";; ANSWERS:")) {
-                    section = Section.ANSWER;
-                    line = r.readLine();
-                }
-                else if (line.startsWith(";; AUTHORITY RECORDS:")) {
-                   section = Section.AUTHORITY;
-                   line = r.readLine();
-                }
-                else if (line.startsWith(";; ADDITIONAL RECORDS:")) {
+            switch (section) {
+                case 100: // ignore
+                    break;
+
+                case 101: // header
                     section = 100;
-                }
-                else if (line.startsWith("####")) {
-                    return m;
-                }
-                else if (line.startsWith("#")) {
-                    continue;
-                }
+                    data = line.substring(";; ->>HEADER<<- ".length()).split(",");
+                    m.getHeader().setRcode(Rcode.value(data[1].split(":\\s*")[1]));
+                    m.getHeader().setID(Integer.parseInt(data[2].split(":\\s*")[1]));
+                    break;
 
-                switch (section) {
-                    case 100: // ignore
-                        break;
+                case 102: // question
+                    line = r.readLine();
+                    data = line.split(",");
+                    Record q = Record.newRecord(
+                            Name.fromString(data[0].replaceAll(";;\\s*", "")),
+                            Type.value(data[1].split("\\s*=\\s*")[1]),
+                            DClass.value(data[2].split("\\s*=\\s*")[1]));
+                    m.addRecord(q, Section.QUESTION);
+                    section = 100;
+                    break;
 
-                   case 101: // header
-                       section = 100;
-                       data = line.substring(";; ->>HEADER<<- ".length()).split(",");
-                       m.getHeader().setRcode(Rcode.value(data[1].split(":\\s*")[1]));
-                       m.getHeader().setID(Integer.parseInt(data[2].split(":\\s*")[1]));
-                       break;
-
-                    case 102: // question
-                        line = r.readLine();
-                        data = line.split(",");
-                       Record q = Record.newRecord(
-                               Name.fromString(data[0].replaceAll(";;\\s*", "")),
-                               Type.value(data[1].split("\\s*=\\s*")[1]),
-                               DClass.value(data[2].split("\\s*=\\s*")[1]));
-                        m.addRecord(q, Section.QUESTION);
-                        section = 100;
-                        break;
-
-                        default:
-                            if (line != null && !"".equals(line)) {
-                                Master ma = new Master(new ByteArrayInputStream(line.getBytes()));
-                                Record record = ma.nextRecord();
-                                if (record != null) {
-                                    m.addRecord(record, section);
-                                }
-                            }
-                }
+                default:
+                    if (line != null && !"".equals(line)) {
+                        Master ma = new Master(new ByteArrayInputStream(line.getBytes()));
+                        Record record = ma.nextRecord();
+                        if (record != null) {
+                            m.addRecord(record, section);
+                        }
+                    }
             }
+        }
 
-            r.close();
-            return m;
+        r.close();
+        return m;
     }
 }
