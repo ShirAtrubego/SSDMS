@@ -159,16 +159,6 @@ public class JUniTestClass {
 
     }
 
-
-    /*
-    @Test
-    public void testCAARecord() throws Exception {
-        CAARecord caaRecord = new CAARecord();
-        caaRecord.checkCAARecord("weberdns.de");
-        //CAARecord d = caaRecord.checkCAARecord("weberdns.de");
-    }
-    */
-
     @After
     // runs after each test
     public void after(){}
