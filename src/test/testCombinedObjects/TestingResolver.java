@@ -161,47 +161,47 @@ public class TestingResolver {
 
         // Answer weberdns.de on response DNSSEC Type 1
         //Reader  a = new FileReader("src/testing/dnssecResponse/weber.txt");
-        Reader  a = new FileReader("src/testing/dnssecResponse/weberdns.de");
+        Reader  a = new FileReader("src/test/testCombinedObjects/dnssecResponse/weberdns.de");
         Message b = readMessage(a);
 
         // Answer weberdns.de on response DNSKEY Type 48
 
-        Reader  c = new FileReader("src/testing/dnssecResponse/weberdnskey.txt");
+        Reader  c = new FileReader("src/test/testCombinedObjects/dnssecResponse/weberdnskey.txt");
         Message d = readMessage(c);
 
         // Answer weberdns.de on response DNSSEC MX DNS Type 1
 
-        Reader  e = new FileReader("src/testing/dnssecResponse/webermxdns1.txt");
+        Reader  e = new FileReader("src/test/testCombinedObjects/dnssecResponse/webermxdns1.txt");
         Message f = readMessage(e);
 
         // Answer weberdns.de on response DNSKEY MX DNS Type 48
 
-        Reader  g = new FileReader("src/testing/dnssecResponse/webermxdns48.txt");
+        Reader  g = new FileReader("src/test/testCombinedObjects/dnssecResponse/webermxdns48.txt");
         Message h = readMessage(g);
 
         // Answer weberdns.de TLSA response Port 25 Type 52
 
-        Reader  i = new FileReader("src/testing/tlsaResponse/tlsa.txt");
+        Reader  i = new FileReader("src/test/testCombinedObjects/tlsaResponse/tlsa.txt");
         Message j = readMessage(i);
 
         // Answer weberdns.de TLSA response Port 465 Type 52
 
-        Reader  k = new FileReader("src/testing/tlsaResponse/tlsa465.txt");
+        Reader  k = new FileReader("src/test/testCombinedObjects/tlsaResponse/tlsa465.txt");
         Message l = readMessage(k);
 
         // Answer weberdns.de TLSA response Port 587 Type 52
 
-        Reader  m = new FileReader("src/testing/tlsaResponse/tlsa587.txt");
+        Reader  m = new FileReader("src/test/testCombinedObjects/tlsaResponse/tlsa587.txt");
         Message n = readMessage(m);
 
         // Answer weberdns.de TLSA response Port 25 Type 52
 
-        Reader  o = new FileReader("src/testing/tlsaResponse/tlsa443.txt");
+        Reader  o = new FileReader("src/test/testCombinedObjects/tlsaResponse/tlsa443.txt");
         Message p = readMessage(o);
 
         // Answer weberdns.de CAA response Type 257
 
-        Reader  q = new FileReader("src/testing/caaResponse/caa.txt");
+        Reader  q = new FileReader("src/test/testCombinedObjects/caaResponse/caa.txt");
         Message r = readMessage(q);
 
 
