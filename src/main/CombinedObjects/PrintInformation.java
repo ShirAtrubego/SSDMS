@@ -40,7 +40,7 @@ public class PrintInformation {
         }
     }
 
-    private static void printDNSKEYInfo(Record r, int i) throws DNSSEC.DNSSECException {
+    private void printDNSKEYInfo(Record r, int i) throws DNSSEC.DNSSECException {
         if (r instanceof DNSKEYRecord) {
             System.out.println("DNSKEYRECORD    " + i);
             DNSKEYRecord dr = (DNSKEYRecord) r; // no begründe
@@ -56,7 +56,7 @@ public class PrintInformation {
         }
     }
 
-    private static void checkFlag(int flag) {
+    private void checkFlag(int flag) {
         switch (flag) {
             case 257:
                 System.out.println("   Key Signing Key (KSK)");
@@ -67,7 +67,7 @@ public class PrintInformation {
         }
     }
 
-    private static void securityRating(InterfaceMessage response) throws DNSSEC.DNSSECException {
+    private void securityRating(InterfaceMessage response) throws DNSSEC.DNSSECException {
         Record[] sect1 = response.getSectionArray(1);
         if (null != sect1) {
             for (int i = 0; i < sect1.length; i++) {
@@ -232,7 +232,7 @@ public class PrintInformation {
     }
 
 
-    private static void printRRSIGInfo(Record r, int i) {
+    private void printRRSIGInfo(Record r, int i) {
         if (r instanceof RRSIGRecord) {
             System.out.println("RRSIGRECORD   " + i);
             RRSIGRecord rr = (RRSIGRecord) r;
@@ -249,7 +249,7 @@ public class PrintInformation {
         }
     }
 
-    public static void checkAlgorithm(int number) {
+    public void checkAlgorithm(int number) {
         System.out.print("   Algorithm:   ");
         switch (number) {
             case 1:
@@ -285,7 +285,7 @@ public class PrintInformation {
         }
     }
 
-    private static void printCAARECORDInfo(Record r, int i) {
+    private void printCAARECORDInfo(Record r, int i) {
         if (r instanceof CAARecord) {
             System.out.println("CAARECORD    " + i);
             CAARecord dr = (CAARecord) r;
@@ -297,7 +297,7 @@ public class PrintInformation {
         }
     }
 
-    private static void checkTag(String tag) {
+    private void checkTag(String tag) {
         switch (tag) {
             case "issue":
                 System.out.println("   :   explicity authorizes a single certificate authority to issue a certificate (any type) for the hostname.");
@@ -311,7 +311,7 @@ public class PrintInformation {
         }
     }
 
-    private static void printTLSAInfo(Record r, int i) {
+    private void printTLSAInfo(Record r, int i) {
         if (r instanceof TLSARecord) {
             System.out.println("TLSARECORD    " + i);
             TLSARecord dr = (TLSARecord) r;
@@ -329,7 +329,7 @@ public class PrintInformation {
         }
     }
 
-    private static void checkSelector(int selector) {
+    private void checkSelector(int selector) {
         switch (selector) {
             case 0:
                 System.out.println("   :   The hash contains the complete certificate (not recommended). ");
@@ -343,7 +343,7 @@ public class PrintInformation {
         }
     }
 
-    private static void checkType(int matchingType) {
+    private void checkType(int matchingType) {
         switch (matchingType) {
             case 0:
                 System.out.println("   :   A hash is created from the complete certificate. ");
@@ -354,7 +354,7 @@ public class PrintInformation {
         }
     }
 
-    private static void checkUsage(int certificateUsage) {
+    private void checkUsage(int certificateUsage) {
         switch (certificateUsage) {
             case 0:
                 System.out.println("   :   The hash belongs to the certification authority that can issue certificates for this host. The client must know the " +
