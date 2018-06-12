@@ -29,7 +29,7 @@ public class Main {
         String lines = " ------------------------------------------------------- ";
 
         DNSSECRecord dnsSec = new DNSSECRecord();
-
+/*
         System.out.println(lines + hostWeber + lines);
         System.out.println(lines + "DNSSEC Query" + lines);
         InterfaceMessage firstDnsSecMessage = dnsSec.getDNSSECRecord(hostWeber, first);
@@ -38,21 +38,21 @@ public class Main {
         System.out.println(lines + "DNSKEY Query" + lines);
         InterfaceMessage secondDnsSecMessage = dnsSec.getDNSSECRecord(hostWeber, second);
         dnsSec.printDNSSECRecordSections(secondDnsSecMessage);
-
+*/
 
         CAARecord caaRecord = new CAARecord();
-
+/*
         InterfaceMessage caaRecordMessage = caaRecord.getCAARecord(hostWeber);
         System.out.println(lines + hostWeber + lines);
         caaRecord.printCAASections(caaRecordMessage);
-
+*/
         TLSARecord tlsa = new TLSARecord();
-
+/*
         System.out.println(lines+ hostWeber + lines);
 
         tlsa.convertToMXRecord(hostWeber);
         tlsa.checkTLSAFQDN(hostWeber);
         tlsa.printTLSAMxRecord(hostWeber);
-
+*/
     }
 }

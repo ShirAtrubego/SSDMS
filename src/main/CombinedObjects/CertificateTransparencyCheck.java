@@ -15,7 +15,7 @@ public class CertificateTransparencyCheck {
     }
 
     public boolean checkTransparency() throws IOException {
-        String host;
+
         final String USER_AGENT = "Mozilla/5.0";
         String urlTest = "https://certspotter.com/api/v0/certs?domain=";
         String url;
@@ -24,6 +24,7 @@ public class CertificateTransparencyCheck {
         BufferedReader in;
         StringBuffer response;
         String responsteString;
+
 
         url = urlTest.concat(mx);
 
@@ -45,11 +46,12 @@ public class CertificateTransparencyCheck {
             response.append(inputLine);
         }
 
+
         in.close();
 
         responsteString = response.toString();
 
-        return responsteString.contains("index");
+       return responsteString.contains("index");
 
     }
 }

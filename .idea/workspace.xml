@@ -1,23 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42e0904c-e27a-4024-866a-7a7ab944c354" name="Default" comment="Testing, 1">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/caaResponse/caa.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/dnssecResponse/weberdns.de" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/dnssecResponse/weberdnskey.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/dnssecResponse/webermxdns1.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/dnssecResponse/webermxdns48.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/tlsaResponse/tlsa.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/tlsaResponse/tlsa443.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/tlsaResponse/tlsa465.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/tlsaResponse/tlsa587.txt" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/transparencyResponse/transparencyWeberDNS.txt" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" afterPath="$PROJECT_DIR$/.idea/libraries/junit_4_12.xml" />
-      <change beforePath="$PROJECT_DIR$/SSDMS.iml" afterPath="$PROJECT_DIR$/SSDMS.iml" />
+    <list default="true" id="42e0904c-e27a-4024-866a-7a7ab944c354" name="Default" comment="refactored code">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceLookup.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceLookup.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceMXRecord.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceMXRecord.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceMessage.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceMessage.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceName.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceName.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceRecord.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceRecord.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/Main.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java" />
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/TypeLookup.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/TypeLookup.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/TypeMXRecord.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/TypeMXRecord.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/TypeMessage.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/TypeMessage.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/TypeName.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/TypeName.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/TypeRecord.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/TypeRecord.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/Main.java" afterPath="$PROJECT_DIR$/src/main/SingeObjects/Main.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -29,11 +32,41 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="257">
+              <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="InterfaceName.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceName.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="119">
+              <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="SecurityCheck.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="567">
-              <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+            <state relative-caret-position="189">
+              <caret line="20" column="81" lean-forward="false" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -41,24 +74,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestingResolver.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java">
+      <file leaf-file-name="CertificateTransparencyAll.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="189">
-              <caret line="356" column="26" lean-forward="false" selection-start-line="356" selection-start-column="26" selection-end-line="356" selection-end-column="26" />
-              <folding>
-                <element signature="e#2776#2777#0" expanded="true" />
-                <element signature="e#2823#2824#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="297">
+              <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/Main.java">
+      <file leaf-file-name="ConvertToMX.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="58" column="19" lean-forward="true" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+            <state relative-caret-position="357">
+              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CertificateTransparencyCheck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="416">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="PrintInformation.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="189">
+              <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
               <folding />
             </state>
           </provider>
@@ -67,9 +117,11 @@
       <file leaf-file-name="SSDMS.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="197">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="408">
+              <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -102,10 +154,18 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/SSDMS.iml" />
-        <option value="$PROJECT_DIR$/src/main/CombinedObjects/Main.java" />
         <option value="$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java" />
-        <option value="$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java" />
         <option value="$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/SingeObjects/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/TypeMXRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceName.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java" />
       </list>
     </option>
   </component>
@@ -200,6 +260,7 @@
       <recent name="test.testCombinedObjects" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Stateless\git\SSDMS\SSDMS\src\main\CombinedObjects" />
       <recent name="C:\Users\Stateless\git\SSDMS\SSDMS\src\test\testCombinedObjects" />
       <recent name="C:\Users\Stateless\git\SSDMS\SSDMS\src\test\testCombinedObjects\dnssecResponse" />
     </key>
@@ -425,8 +486,16 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1528745285432</updated>
-      <workItem from="1528745286711" duration="4516000" />
+      <workItem from="1528745286711" duration="7974000" />
     </task>
+    <task id="LOCAL-00001" summary="Testing, 1">
+      <created>1528751283439</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1528751283439</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -462,7 +531,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4516000" />
+    <option name="totallyTimeSpent" value="7974000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -505,7 +574,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Testing, 1" />
-    <option name="LAST_COMMIT_MESSAGE" value="Testing, 1" />
+    <MESSAGE value="refactored code" />
+    <option name="LAST_COMMIT_MESSAGE" value="refactored code" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -556,34 +626,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="27" column="31" lean-forward="false" selection-start-line="27" selection-start-column="29" selection-end-line="27" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/SSDMS.iml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
           <caret line="19" column="23" lean-forward="false" selection-start-line="19" selection-start-column="23" selection-end-line="19" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="false" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="28" />
           <folding />
         </state>
       </provider>
@@ -593,7 +639,7 @@
         <state relative-caret-position="499">
           <caret line="34" column="9" lean-forward="false" selection-start-line="34" selection-start-column="9" selection-end-line="34" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -630,40 +676,170 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="358" column="27" lean-forward="false" selection-start-line="358" selection-start-column="27" selection-end-line="358" selection-end-column="27" />
+          <folding>
+            <element signature="e#2776#2777#0" expanded="false" />
+            <element signature="e#2823#2824#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/InterfaceName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-884">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="92" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeMessage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceLookup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeLookup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceMXRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeMXRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="58" column="19" lean-forward="true" selection-start-line="58" selection-start-column="19" selection-end-line="58" selection-end-column="19" />
+        <state relative-caret-position="257">
+          <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="297">
+          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="416">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="189">
+          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="197">
-          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="37" column="26" lean-forward="true" selection-start-line="37" selection-start-column="26" selection-end-line="37" selection-end-column="26" />
+        <state relative-caret-position="408">
+          <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java">
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
-          <caret line="356" column="26" lean-forward="false" selection-start-line="356" selection-start-column="26" selection-end-line="356" selection-end-column="26" />
+          <caret line="20" column="81" lean-forward="false" selection-start-line="20" selection-start-column="81" selection-end-line="20" selection-end-column="81" />
           <folding>
-            <element signature="e#2776#2777#0" expanded="true" />
-            <element signature="e#2823#2824#0" expanded="true" />
+            <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>

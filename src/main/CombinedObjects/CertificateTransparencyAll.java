@@ -18,10 +18,9 @@ public class CertificateTransparencyAll {
 
     public String getAllTransparencyEntries(String host) throws Exception {
 
-//        String hostName = urlTest.concat(host);
+        String hostName = urlTest.concat(host);
 
-
-        URL obj = new URL(urlTest.concat(host));
+        URL obj = new URL(hostName);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
 
         // optional default is GETx

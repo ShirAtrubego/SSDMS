@@ -1,7 +1,6 @@
 package main.CombinedObjects;
 
 import org.xbill.DNS.DNSSEC;
-import org.xbill.DNS.Message;
 
 import java.io.IOException;
 import java.util.Scanner;
@@ -128,15 +127,16 @@ public class Main {
             InterfaceMessage checkdnssec = check.getSecurityResponse(hostname, dnssecType);
             check.printInformation(checkdnssec, dnssecType);
             String mx = check.getConvertedMX(hostname);
+            System.out.println( ":  ***********" +"      Host " + mx + " has preference " + mx + " **************");
             InterfaceMessage checkMXdnssec = check.getSecurityResponse(mx, dnssecType);
             check.printInformation(checkMXdnssec, dnssecType);
         }
 
         private static void checkCertificate (String hostname, SSDMS check) throws Exception {
+            System.out.println("Certificate Transparency wird üebrprüft");
             System.out.println("Möchten Sie alle Einträge anschauen oder nur überprüfen, ob sich der Mail-Server im Transparency berfindet?");
             System.out.println("Alle: 1");
             System.out.println("Nur Check: 2");
-            System.out.println("Certificate Transparency wird üebrprüft");
             Scanner cert = new Scanner(System.in);
             int certAuswahl = cert.nextInt();
             switch(certAuswahl){

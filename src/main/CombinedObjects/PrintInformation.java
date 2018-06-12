@@ -18,7 +18,7 @@ public class PrintInformation {
         Record[] sect1 = message.getSectionArray(1);
         if (null != sect1) {
             for (int i = 0; i < sect1.length; i++) {
-                InterfaceRecord r = (InterfaceRecord) sect1[i];
+                Record r =  sect1[i];
                 switch (type) {
                     case 1:
                         printRRSIGInfo(r, i);
@@ -40,7 +40,7 @@ public class PrintInformation {
         }
     }
 
-    private static void printDNSKEYInfo(InterfaceRecord r, int i) throws DNSSEC.DNSSECException {
+    private static void printDNSKEYInfo(Record r, int i) throws DNSSEC.DNSSECException {
         if (r instanceof DNSKEYRecord) {
             System.out.println("DNSKEYRECORD    " + i);
             DNSKEYRecord dr = (DNSKEYRecord) r; // no begründe
@@ -103,7 +103,8 @@ public class PrintInformation {
                                 }
                                 else{
                                     System.out.println("Rating: **");
-                                    System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit RSA, but for now that's fine. Acceptable until 2030");
+                                    System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit RSA, " +
+                                            "but for now that's fine. Acceptable until 2030");
                                 }
                             }
                             else{
@@ -122,7 +123,8 @@ public class PrintInformation {
                                 }
                                 else{
                                     System.out.println("Rating: **");
-                                    System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit RSA, but for now that's fine. Acceptable until 2030");
+                                    System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit RSA," +
+                                            " but for now that's fine. Acceptable until 2030");
                                 }
                             }
                             else{
@@ -148,7 +150,8 @@ public class PrintInformation {
                                 }
                                 else{
                                     System.out.println("Rating: **");
-                                    System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit DSA, but for now that's fine. Acceptable until 2030");
+                                    System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit DSA," +
+                                            " but for now that's fine. Acceptable until 2030");
                                 }
                             }
                             else{
@@ -188,7 +191,8 @@ public class PrintInformation {
                                 }
                                 else{
                                     System.out.println("Rating: **");
-                                    System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit DH, but for now that's fine. Acceptable until 2030");
+                                    System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit DH," +
+                                            " but for now that's fine. Acceptable until 2030");
                                 }
                             }
                             else{
@@ -228,7 +232,7 @@ public class PrintInformation {
     }
 
 
-    private static void printRRSIGInfo(InterfaceRecord r, int i) {
+    private static void printRRSIGInfo(Record r, int i) {
         if (r instanceof RRSIGRecord) {
             System.out.println("RRSIGRECORD   " + i);
             RRSIGRecord rr = (RRSIGRecord) r;
@@ -281,7 +285,7 @@ public class PrintInformation {
         }
     }
 
-    private static void printCAARECORDInfo(InterfaceRecord r, int i) {
+    private static void printCAARECORDInfo(Record r, int i) {
         if (r instanceof CAARecord) {
             System.out.println("CAARECORD    " + i);
             CAARecord dr = (CAARecord) r;
@@ -307,7 +311,7 @@ public class PrintInformation {
         }
     }
 
-    private static void printTLSAInfo(InterfaceRecord r, int i) {
+    private static void printTLSAInfo(Record r, int i) {
         if (r instanceof TLSARecord) {
             System.out.println("TLSARECORD    " + i);
             TLSARecord dr = (TLSARecord) r;
@@ -353,13 +357,15 @@ public class PrintInformation {
     private static void checkUsage(int certificateUsage) {
         switch (certificateUsage) {
             case 0:
-                System.out.println("   :   The hash belongs to the certification authority that can issue certificates for this host. The client must know the certification authority or it must be signed by a trusted certification authority.  ");
+                System.out.println("   :   The hash belongs to the certification authority that can issue certificates for this host. The client must know the " +
+                        "certification authority or it must be signed by a trusted certification authority.  ");
                 break;
             case 1:
                 System.out.println("   :   The hash belongs to the server certificate. It must be signed by a certification authority trusted by the client.  ");
                 break;
             case 2:
-                System.out.println("   :   The hash belongs to a certification authority that can issue certificates for this host. The client should have your trust even if it is unknown to him and not signed by any known certification authority.  ");
+                System.out.println("   :   The hash belongs to a certification authority that can issue certificates for this host. The client should have your " +
+                        "trust even if it is unknown to him and not signed by any known certification authority.  ");
                 break;
             case 3:
                 System.out.println("   :   The hash belongs to the server certificate and the client should trust it without further checking the trust chain.  ");

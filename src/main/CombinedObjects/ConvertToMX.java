@@ -10,7 +10,7 @@ import java.io.IOException;
 public class ConvertToMX {
 
     String hostname;
-   String MX;
+    String MX;
 
     public ConvertToMX(String hostname) {
         this.hostname = hostname;
