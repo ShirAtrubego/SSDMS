@@ -10,22 +10,18 @@ import java.io.IOException;
 public class ConvertToMX {
 
     String hostname;
-    String MX;
 
     public ConvertToMX(String hostname) {
         this.hostname = hostname;
     }
 
     public String convertToMXRecord(String hostname) throws IOException {
+
         Record[] records = new Lookup(hostname, Type.MX).run();
         for (Record record : records) {
-            MXRecord mx = (MXRecord) record;
-            return mx.getTarget().toString();
+            MXRecord mxHost = (MXRecord) record;
+            return mxHost.getTarget().toString();
         }
         return null;
-    }
-
-    public String getMXName() {
-        return MX;
     }
 }

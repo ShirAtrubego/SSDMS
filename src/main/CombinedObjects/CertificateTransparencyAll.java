@@ -17,23 +17,16 @@ public class CertificateTransparencyAll {
     private String urlTest = "https://certspotter.com/api/v0/certs?domain=";
 
     public String getAllTransparencyEntries(String host) throws Exception {
-
-        String hostName = urlTest.concat(host);
-
-        URL obj = new URL(hostName);
+        String url = urlTest.concat(host);
+        URL obj = new URL(url);
         HttpURLConnection con = (HttpURLConnection) obj.openConnection();
-
         // optional default is GETx
         con.setRequestMethod("GET");
-
         //add request header
         con.setRequestProperty("User-Agent", USER_AGENT);
-
-        BufferedReader in = new BufferedReader(
-                new InputStreamReader(con.getInputStream()));
+        BufferedReader in = new BufferedReader(new InputStreamReader(con.getInputStream()));
         String inputLine;
         StringBuilder response = new StringBuilder();
-
         while ((inputLine = in.readLine()) != null) {
             response.append(inputLine);
         }
