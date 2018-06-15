@@ -2,7 +2,8 @@ package main.SingeObjects;
 
 import org.xbill.DNS.Name;
 
-public interface InterfaceRecord {
+public interface AbstractRecord {
+
 
 //        abstract void  rrFromWire(DNSInput in) throws IOException;
 
@@ -22,23 +23,23 @@ public interface InterfaceRecord {
 
 //        public static org.xbill.DNS.Record fromWire(byte [] b, int section) throws IOException;
 
-        //       void toWire(DNSOutput out, int section, Compression c);
+ //       void toWire(DNSOutput out, int section, Compression c);
 
 
-        byte [] toWire(int section);
+        public byte [] toWire(int section);
 
 
-        byte [] toWireCanonical();
+        public byte [] toWireCanonical();
 
-        byte [] rdataToWireCanonical();
+        public byte [] rdataToWireCanonical();
 
 
 //        abstract String rrToString();
 
 
-        String rdataToString();
+        public String rdataToString();
 
-        String toString();
+        public String toString();
 
 
 //        abstract void  rdataFromString(Tokenizer st, Name origin) throws IOException;
@@ -50,35 +51,35 @@ public interface InterfaceRecord {
 //        public static org.xbill.DNS.Record fromString(Name name, int type, int dclass, long ttl, String s, Name origin) throws IOException;
 
 
-        Name getName();
+        public Name getName();
 
-        int getType();
+        public int getType();
 
-        int getRRsetType();
+        public int getRRsetType();
 
-        int getDClass();
+        public int getDClass();
 
-        long  getTTL() ;
+        public long  getTTL() ;
 
-        //       abstract void rrToWire(DNSOutput out, Compression c, boolean canonical);
+ //       abstract void rrToWire(DNSOutput out, Compression c, boolean canonical);
 
-        boolean sameRRset(org.xbill.DNS.Record rec);
+        public boolean sameRRset(org.xbill.DNS.Record rec);
 
-        boolean equals(Object arg);
+        public boolean equals(Object arg);
 
-        int hashCode();
+        public int hashCode();
 
 //        org.xbill.DNS.Record cloneRecord();
 
-        org.xbill.DNS.Record withName(Name name);
+        public org.xbill.DNS.Record withName(Name name);
 
 //        org.xbill.DNS.Record withDClass(int dclass, long ttl) ;
 
 //        void setTTL(long ttl);
 
-        int compareTo(Object o);
+        public int compareTo(Object o);
 
-        Name getAdditionalName();
+        public Name getAdditionalName();
 
 
 //        static int checkU8(String field, int val);
@@ -92,6 +93,5 @@ public interface InterfaceRecord {
 //        static byte [] checkByteArrayLength(String field, byte [] array, int maxLength);
 
     }
-
 
 

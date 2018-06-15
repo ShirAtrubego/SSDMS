@@ -1,6 +1,7 @@
 package test.testCombinedObjects;
 
 import main.CombinedObjects.*;
+
 import org.junit.*;
 import org.xbill.DNS.*;
 

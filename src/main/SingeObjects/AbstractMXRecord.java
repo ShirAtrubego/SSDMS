@@ -2,7 +2,8 @@ package main.SingeObjects;
 
 import org.xbill.DNS.Name;
 
-public interface InterfaceMXRecord {
+public interface AbstractMXRecord {
+
 
 //        Record getObject();
 
@@ -16,5 +17,4 @@ public interface InterfaceMXRecord {
 
 
 
-    }
-
+}

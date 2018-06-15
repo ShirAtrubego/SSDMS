@@ -96,7 +96,7 @@ public class TestingResolver {
     }
 
     public void setEDNS(int level) {
-        this.setEDNS(level, 0, 0, null);
+        this.setEDNS(level, 0, 0, (List) null);
     }
 
     public void setTSIGKey(TSIG key) {
@@ -160,49 +160,49 @@ public class TestingResolver {
     public Message send(Message query, int type, String hostname) throws IOException {
 
         // Answer weberdns.de on response DNSSEC Type 1
-        //Reader  a = new FileReader("src/testing/dnssecResponse/weber.txt");
-        Reader a = new FileReader("src/testing/dnssecResponse/weberdns.de");
-        Message b = readMessage(a);
+        //Reader  dnssecMessage = new FileReader("src/testing/dnssecResponse/weber.txt");
+        Reader dnssecMessage = new FileReader("src/testing/dnssecResponse/weberdns.de");
+        Message dnssecResponse = readMessage(dnssecMessage);
 
         // Answer weberdns.de on response DNSKEY Type 48
 
-        Reader c = new FileReader("src/testing/dnssecResponse/weberdnskey.txt");
-        Message d = readMessage(c);
+        Reader dnskeyMessage = new FileReader("src/testing/dnssecResponse/weberdnskey.txt");
+        Message dnskeyResponse = readMessage(dnskeyMessage);
 
         // Answer weberdns.de on response DNSSEC MX DNS Type 1
 
-        Reader e = new FileReader("src/testing/dnssecResponse/webermxdns1.txt");
-        Message f = readMessage(e);
+        Reader dnssecMXMessage = new FileReader("src/testing/dnssecResponse/webermxdns1.txt");
+        Message dnssecMXResponse = readMessage(dnssecMXMessage);
 
         // Answer weberdns.de on response DNSKEY MX DNS Type 48
 
-        Reader g = new FileReader("src/testing/dnssecResponse/webermxdns48.txt");
-        Message h = readMessage(g);
+        Reader dnskeyMXMessage = new FileReader("src/testing/dnssecResponse/webermxdns48.txt");
+        Message dnskeyMXResponse = readMessage(dnskeyMXMessage);
 
         // Answer weberdns.de TLSA response Port 25 Type 52
 
-        Reader i = new FileReader("src/testing/tlsaResponse/tlsa.txt");
-        Message j = readMessage(i);
+        Reader tlsaMessagePort25 = new FileReader("src/testing/tlsaResponse/tlsa.txt");
+        Message tlsaResponsePort25 = readMessage(tlsaMessagePort25);
 
         // Answer weberdns.de TLSA response Port 465 Type 52
 
-        Reader k = new FileReader("src/testing/tlsaResponse/tlsa465.txt");
-        Message l = readMessage(k);
+        Reader tlsaMessagePort465 = new FileReader("src/testing/tlsaResponse/tlsa465.txt");
+        Message tlsaResponsePort465 = readMessage(tlsaMessagePort465);
 
         // Answer weberdns.de TLSA response Port 587 Type 52
 
-        Reader m = new FileReader("src/testing/tlsaResponse/tlsa587.txt");
-        Message n = readMessage(m);
+        Reader tlsaMessagePort587 = new FileReader("src/testing/tlsaResponse/tlsa587.txt");
+        Message tlsaResponsePort587 = readMessage(tlsaMessagePort587);
 
         // Answer weberdns.de TLSA response Port 25 Type 52
 
-        Reader o = new FileReader("src/testing/tlsaResponse/tlsa443.txt");
-        Message p = readMessage(o);
+        Reader tlsaMessagePort443 = new FileReader("src/testing/tlsaResponse/tlsa443.txt");
+        Message tlsaResponsePort443 = readMessage(tlsaMessagePort443);
 
         // Answer weberdns.de CAA response Type 257
 
-        Reader q = new FileReader("src/testing/caaResponse/caa.txt");
-        Message r = readMessage(q);
+        Reader caaMessage = new FileReader("src/testing/caaResponse/caa.txt");
+        Message caaResponse = readMessage(caaMessage);
 
 
 
@@ -210,7 +210,7 @@ public class TestingResolver {
         query = (Message) query.clone();
         this.applyEDNS(query);
         if (this.tsig != null) {
-            this.tsig.apply(query, null);
+            this.tsig.apply(query, (TSIGRecord) null);
         }
 
         byte[] out = query.toWire(65535);
@@ -224,27 +224,27 @@ public class TestingResolver {
             switch (type) {
                 case 1:
                     if (!hostname.contains("mail.weberdns.de.")) {
-                        return b;
+                        return dnssecResponse;
                     } else {
-                        return f;
+                        return dnssecMXResponse;
                     }
                 case 48:
                     if (!hostname.contains("mail.weberdns.de.")) {
-                        return d;
+                        return dnskeyResponse;
                     } else {
-                        return h;
+                        return dnskeyMXResponse;
                     }
                 case 257:
-                    return r;
+                    return caaResponse;
                 case 52:
                     if (hostname.contains("_25._tcp.mail.weberdns.de.")) {
-                        return j;
+                        return tlsaResponsePort25;
                     } else if (hostname.contains("_465._tcp.mail.weberdns.de.")) {
-                        return l;
+                        return tlsaResponsePort465;
                     } else if (hostname.contains("_587._tcp.mail.weberdns.de.")) {
-                        return n;
+                        return tlsaResponsePort587;
                     } else {
-                        return p;
+                        return tlsaResponsePort443;
                     }
             }
         }
@@ -254,7 +254,7 @@ public class TestingResolver {
     public Object sendAsync(Message query, ResolverListener listener) {
         Integer id;
         synchronized (this) {
-            id = uniqueID++;
+            id = new Integer(uniqueID++);
         }
 
         Record question = query.getQuestion();
@@ -303,7 +303,7 @@ public class TestingResolver {
         }
 
         Message m = null;
-        String line;
+        String line = null;
         int section = 103;
         while ((line = r.readLine()) != null) {
             String[] data;

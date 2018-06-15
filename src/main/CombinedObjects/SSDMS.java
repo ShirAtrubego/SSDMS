@@ -76,7 +76,7 @@ public class SSDMS {
         }
     }
 
-    public InterfaceMessage getSecurityResponse(String hostname, int type) throws IOException {
+    public InterfaceMessage getSecurityResponse(String hostname, int type) throws IOException, DNSSEC.DNSSECException {
         SecurityCheck secCheck = new SecurityCheck(hostname);
         return secCheck.check(hostname, type);
     }

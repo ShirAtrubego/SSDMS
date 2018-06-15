@@ -1,14 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="42e0904c-e27a-4024-866a-7a7ab944c354" name="Default" comment="cleaned Code">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/JUnitTestClass.java" />
+    <list default="true" id="42e0904c-e27a-4024-866a-7a7ab944c354" name="Default" comment="Final Push for Project SSDMS">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/AbstractLookup.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/AbstractMXRecord.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/AbstractName.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/CertificateMailServer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/CertificateTransparencyALL.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/CertificateTransparencyCheck.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/CertificateWebServer.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/DNSLookup.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/DNSMXRecord.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/DNSName.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/DNSRecord.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/SingeObjects/MXRecordListCheck.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyLog.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyLog.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyLog.java" />
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceLookup.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceMXRecord.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceMessage.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceMessage.java" />
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceName.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceName.java" />
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceRecord.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceRecord.java" />
@@ -16,14 +25,25 @@
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java" />
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java" />
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/TypeLookup.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/TypeMXRecord.java" afterPath="" />
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/TypeMessage.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/TypeMessage.java" />
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/TypeName.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/TypeName.java" />
       <change beforePath="$PROJECT_DIR$/src/main/CombinedObjects/TypeRecord.java" afterPath="$PROJECT_DIR$/src/main/CombinedObjects/TypeRecord.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/CAARecord.java" afterPath="$PROJECT_DIR$/src/main/SingeObjects/CAARecord.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/DNSSECRecord.java" afterPath="$PROJECT_DIR$/src/main/SingeObjects/DNSSECRecord.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/InterfaceLookup.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/InterfaceMXRecord.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/InterfaceMessage.java" afterPath="$PROJECT_DIR$/src/main/SingeObjects/AbstractMessage.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/InterfaceName.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/InterfaceRecord.java" afterPath="$PROJECT_DIR$/src/main/SingeObjects/AbstractRecord.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/Main.java" afterPath="$PROJECT_DIR$/src/main/SingeObjects/Main.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/TLSARecord.java" afterPath="$PROJECT_DIR$/src/main/SingeObjects/TLSARecord.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/TypeLookup.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/TypeMXRecord.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/TypeMessage.java" afterPath="$PROJECT_DIR$/src/main/SingeObjects/DNSMessage.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/TypeName.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/SingeObjects/TypeRecord.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/test/testCombinedObjects/JUnitTestClass.java" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/JUnitTestClass.java" />
       <change beforePath="$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java" afterPath="$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java" />
-      <change beforePath="$PROJECT_DIR$/src/test/testCombinedObjects/dnssecResponse/testFile.txt" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -35,32 +55,35 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="ConvertToMX.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java">
+      <file leaf-file-name="TestingResolver.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+            <state relative-caret-position="190">
+              <caret line="289" column="9" lean-forward="false" selection-start-line="289" selection-start-column="9" selection-end-line="289" selection-end-column="9" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrintInformation.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
+      <file leaf-file-name="CertificateTransparencyCheck.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/CertificateTransparencyCheck.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+            <state relative-caret-position="298">
+              <caret line="59" column="4" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SSDMS.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
+      <file leaf-file-name="CertificateMailServer.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/CertificateMailServer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="190">
-              <caret line="78" column="93" lean-forward="false" selection-start-line="78" selection-start-column="93" selection-end-line="78" selection-end-column="93" />
-              <folding />
+            <state relative-caret-position="406">
+              <caret line="89" column="19" lean-forward="false" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
+              <folding>
+                <element signature="e#3185#3186#0" expanded="true" />
+                <element signature="e#3227#3228#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -75,68 +98,62 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CertificateTransparencyAll.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java">
+      <file leaf-file-name="TLSARecord.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/TLSARecord.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-              <folding>
-                <element signature="e#273#274#0" expanded="true" />
-                <element signature="e#313#314#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CertificateTransparencyLog.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyLog.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="224">
+              <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="InterfaceRecord.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceRecord.java">
+      <file leaf-file-name="ConvertToMX.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state relative-caret-position="221">
+              <caret line="20" column="8" lean-forward="false" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TypeName.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeName.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="JUnitTestClass.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/JUnitTestClass.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1870">
-              <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="TestingResolver.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java">
+      <file leaf-file-name="PrintInformation.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="190">
-              <caret line="346" column="22" lean-forward="false" selection-start-line="346" selection-start-column="22" selection-end-line="346" selection-end-column="22" />
-              <folding>
-                <element signature="e#2767#2768#0" expanded="true" />
-                <element signature="e#2814#2815#0" expanded="true" />
-              </folding>
+              <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CAARecord.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/CAARecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="197">
+              <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="DNSSECRecord.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/DNSSECRecord.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="194" column="68" lean-forward="false" selection-start-line="194" selection-start-column="68" selection-end-line="194" selection-end-column="68" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SSDMS.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="190">
+              <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -178,12 +195,19 @@
         <option value="$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java" />
         <option value="$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java" />
         <option value="$PROJECT_DIR$/src/main/CombinedObjects/TypeName.java" />
-        <option value="$PROJECT_DIR$/src/test/testCombinedObjects/JUnitTestClass.java" />
-        <option value="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceName.java" />
         <option value="$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java" />
-        <option value="$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java" />
-        <option value="$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/TypeRecord.java" />
+        <option value="$PROJECT_DIR$/src/test/testCombinedObjects/JUnitTestClass.java" />
+        <option value="$PROJECT_DIR$/src/main/SingeObjects/AbstractLookup.java" />
+        <option value="$PROJECT_DIR$/src/main/SingeObjects/AbstractMXRecord.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/InterfaceName.java" />
+        <option value="$PROJECT_DIR$/src/main/SingeObjects/CAARecord.java" />
+        <option value="$PROJECT_DIR$/src/main/SingeObjects/DNSSECRecord.java" />
         <option value="$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java" />
+        <option value="$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java" />
+        <option value="$PROJECT_DIR$/src/main/SingeObjects/CertificateTransparencyCheck.java" />
+        <option value="$PROJECT_DIR$/src/main/SingeObjects/TLSARecord.java" />
+        <option value="$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java" />
       </list>
     </option>
   </component>
@@ -213,7 +237,10 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -241,13 +268,6 @@
               <item name="SSDMS" type="b2602c69:ProjectViewProjectNode" />
               <item name="SSDMS" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="CombinedObjects" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="SSDMS" type="b2602c69:ProjectViewProjectNode" />
-              <item name="SSDMS" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="test" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -265,9 +285,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -284,6 +301,7 @@
       <recent name="test.testCombinedObjects" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Stateless\git\SSDMS\SSDMS\src\main\SingeObjects" />
       <recent name="C:\Users\Stateless\git\SSDMS\SSDMS\src\main\CombinedObjects" />
       <recent name="C:\Users\Stateless\git\SSDMS\SSDMS\src\test\testCombinedObjects\dnssecResponse" />
       <recent name="C:\Users\Stateless\git\SSDMS\SSDMS\src\test\testCombinedObjects" />
@@ -535,7 +553,8 @@
       <workItem from="1528826090721" duration="6708000" />
       <workItem from="1528836018094" duration="1000" />
       <workItem from="1528836484673" duration="10472000" />
-      <workItem from="1528957686541" duration="1170000" />
+      <workItem from="1528957686541" duration="1782000" />
+      <workItem from="1528995065448" duration="2196000" />
     </task>
     <task id="LOCAL-00001" summary="Testing, 1">
       <created>1528751283439</created>
@@ -586,7 +605,14 @@
       <option name="project" value="LOCAL" />
       <updated>1528881136287</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="cleaned Code">
+      <created>1528992266509</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1528992266509</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TestHistory">
@@ -622,7 +648,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="26325000" />
+    <option name="totallyTimeSpent" value="29133000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -635,26 +661,26 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2608225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2608225" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23880596" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23081024" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Learn" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.73593074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.73593074" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -673,7 +699,8 @@
     <MESSAGE value="intermediate result" />
     <MESSAGE value="1st test" />
     <MESSAGE value="cleaned Code" />
-    <option name="LAST_COMMIT_MESSAGE" value="cleaned Code" />
+    <MESSAGE value="Final Push for Project SSDMS" />
+    <option name="LAST_COMMIT_MESSAGE" value="Final Push for Project SSDMS" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -682,104 +709,9 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="663">
-          <caret line="44" column="0" lean-forward="false" selection-start-line="44" selection-start-column="0" selection-end-line="44" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="33" column="28" lean-forward="false" selection-start-line="33" selection-start-column="28" selection-end-line="33" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1020">
-          <caret line="63" column="22" lean-forward="true" selection-start-line="63" selection-start-column="22" selection-end-line="63" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceName.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="8" lean-forward="false" selection-start-line="5" selection-start-column="8" selection-end-line="5" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="9" column="63" lean-forward="false" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="20" column="0" lean-forward="true" selection-start-line="20" selection-start-column="0" selection-end-line="20" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="493">
-          <caret line="34" column="22" lean-forward="false" selection-start-line="34" selection-start-column="22" selection-end-line="34" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1105">
-          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
-      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
           <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -836,71 +768,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeMessage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceLookup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeLookup.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceMXRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeMXRecord.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="816">
-          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="476">
-          <caret line="30" column="49" lean-forward="true" selection-start-line="30" selection-start-column="49" selection-end-line="30" selection-end-column="49" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="23" column="35" lean-forward="true" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="35" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceLookup.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeLookup.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceMXRecord.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeMXRecord.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyCheck.java" />
     <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/dnssecResponse/webermxdns1.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
@@ -929,39 +801,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/dnssecResponse/testFile.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/dnssecResponse/testFile.txt" />
     <entry file="jar://$PROJECT_DIR$/Libraries/dnsjava-2.1.8.jar!/org/xbill/DNS/DNSKEYRecord.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="12" column="13" lean-forward="false" selection-start-line="12" selection-start-column="13" selection-end-line="12" selection-end-column="13" />
-          <folding>
-            <marker date="1528745276229" expanded="false" signature="0:104" ph="/.../" />
-            <marker date="1528745276229" expanded="false" signature="137:273" ph="..." />
-            <marker date="1528745276229" expanded="true" signature="411:418" ph="{}" />
-            <marker date="1528745276229" expanded="false" signature="442:453" ph=" { " />
-            <marker date="1528745276229" expanded="false" signature="479:485" ph=" }" />
-            <marker date="1528745276229" expanded="true" signature="587:656" ph="{...}" />
-            <marker date="1528745276229" expanded="true" signature="784:910" ph="{...}" />
-            <marker date="1528745276229" expanded="true" signature="983:1314" ph="{...}" />
-            <marker date="1528745276229" expanded="true" signature="1346:1529" ph="{...}" />
-            <marker date="1528745276229" expanded="true" signature="1512:1523" ph="{}" />
-            <marker date="1528745276229" expanded="true" signature="1564:1655" ph="{...}" />
-            <marker date="1528745276229" expanded="true" signature="1638:1649" ph="{}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1360">
-          <caret line="83" column="37" lean-forward="false" selection-start-line="83" selection-start-column="37" selection-end-line="83" selection-end-column="37" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -969,22 +813,22 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="511" lean-forward="false" selection-start-line="0" selection-start-column="500" selection-end-line="0" selection-end-column="511" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="82" column="75" lean-forward="false" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeRecord.java">
+    <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/JUniTestClass.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyLog.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
           <folding />
         </state>
       </provider>
@@ -997,15 +841,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyLog.java">
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        <state relative-caret-position="862">
+          <caret line="83" column="24" lean-forward="false" selection-start-line="83" selection-start-column="24" selection-end-line="83" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceRecord.java">
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeMessage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1021,10 +865,92 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/InterfaceRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SecurityCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="23" column="35" lean-forward="false" selection-start-line="23" selection-start-column="33" selection-end-line="23" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/TypeRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/DNSName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="476">
+          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/AbstractName.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/DNSMXRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/DNSRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/JUnitTestClass.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1870">
-          <caret line="2" column="30" lean-forward="false" selection-start-line="2" selection-start-column="30" selection-end-line="2" selection-end-column="30" />
+        <state relative-caret-position="0">
+          <caret line="0" column="10" lean-forward="false" selection-start-line="0" selection-start-column="10" selection-end-line="0" selection-end-column="10" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/AbstractLookup.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="8" lean-forward="false" selection-start-line="6" selection-start-column="8" selection-end-line="6" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/AbstractMXRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="153">
+          <caret line="9" column="8" lean-forward="false" selection-start-line="9" selection-start-column="8" selection-end-line="9" selection-end-column="8" />
           <folding />
         </state>
       </provider>
@@ -1037,36 +963,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/CertificateTransparencyAll.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="11" column="4" lean-forward="false" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="4" />
-          <folding>
-            <element signature="e#273#274#0" expanded="true" />
-            <element signature="e#313#314#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="346" column="22" lean-forward="false" selection-start-line="346" selection-start-column="22" selection-end-line="346" selection-end-column="22" />
-          <folding>
-            <element signature="e#2767#2768#0" expanded="true" />
-            <element signature="e#2814#2815#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/ConvertToMX.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="221">
@@ -1075,10 +971,69 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/CAARecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="197">
+          <caret line="35" column="25" lean-forward="false" selection-start-line="35" selection-start-column="25" selection-end-line="35" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/DNSSECRecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="194" column="68" lean-forward="false" selection-start-line="194" selection-start-column="68" selection-end-line="194" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/SSDMS.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
-          <caret line="78" column="93" lean-forward="false" selection-start-line="78" selection-start-column="93" selection-end-line="78" selection-end-column="93" />
+          <caret line="66" column="25" lean-forward="false" selection-start-line="66" selection-start-column="25" selection-end-line="66" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/testCombinedObjects/TestingResolver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="289" column="9" lean-forward="false" selection-start-line="289" selection-start-column="9" selection-end-line="289" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/CertificateMailServer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="406">
+          <caret line="89" column="19" lean-forward="false" selection-start-line="89" selection-start-column="19" selection-end-line="89" selection-end-column="19" />
+          <folding>
+            <element signature="e#3185#3186#0" expanded="true" />
+            <element signature="e#3227#3228#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/CertificateTransparencyCheck.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="59" column="4" lean-forward="false" selection-start-line="59" selection-start-column="4" selection-end-line="59" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/SingeObjects/TLSARecord.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="224">
+          <caret line="26" column="0" lean-forward="false" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/CombinedObjects/PrintInformation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="71" column="25" lean-forward="false" selection-start-line="71" selection-start-column="25" selection-end-line="71" selection-end-column="25" />
           <folding />
         </state>
       </provider>

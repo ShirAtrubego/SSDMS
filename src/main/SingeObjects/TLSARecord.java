@@ -1,9 +1,6 @@
 package main.SingeObjects;
 
-//import InterfaceMessage;
-//import main.SingeObjects.TypeMessage;
 import org.xbill.DNS.*;
-//import testing.TestingResolver;
 
 import java.io.IOException;
 
@@ -12,25 +9,25 @@ public class TLSARecord {
     private int type = 1;
     private int dclass = 1;
 
-    public InterfaceMessage checkTLSA(String hostname) throws IOException {
+    public AbstractMessage checkTLSA(String hostname) throws IOException, DNSSEC.DNSSECException {
         disableWarning();
 
         SimpleResolver res = new SimpleResolver();
-        // TestingResolver resTest = new TestingResolver();
+       // TestingResolver resTest = new TestingResolver();
 
-        name = Name.fromString(hostname, Name.root);
+        String nameString = hostname;
+        name = Name.fromString(nameString, Name.root);
         type = 52;
         dclass = 1;
         Record tlsaKey = Record.newRecord(name, type, dclass);
-        InterfaceMessage queryTLSA = new TypeMessage(Message.newQuery(tlsaKey));
+        AbstractMessage queryTLSA = new DNSMessage(Message.newQuery(tlsaKey));
 
-        //Message responseTLSATest = res.send(querytlsa);
-        InterfaceMessage responseTLSA = new TypeMessage(res.send(queryTLSA.toXbillMessage()));
+        //Message responsetlsaTest = res.send(querytlsa);
+        return new DNSMessage(res.send(queryTLSA.toXbillMessage()));
 
-        return responseTLSA;
     }
 
-    private void printSections(InterfaceMessage message) {
+    private void printSections(AbstractMessage message) throws DNSSEC.DNSSECException {
         System.out.println("-------------------------------------------------------TLSA Query-------------------------------------------------------");
         Record[] sect1 = message.getSectionArray(1);
         if (null != sect1) {
@@ -97,31 +94,31 @@ public class TLSARecord {
         }
     }
 
-    public void convertToMXRecord (String hostname) throws IOException {
+    public void convertToMXRecord (String hostname) throws IOException, DNSSEC.DNSSECException {
 
         Record[] records = new Lookup(hostname, Type.MX).run();
-        //       String tslaString = "";
+ //       String tslaString = "";
         for (int i = 0; i < records.length; i++) {
             MXRecord mx = (MXRecord) records[i];
             System.out.println(i + ":  ***********" +"      Host " + mx.getTarget() + " has preference " + mx.getPriority() + " **************");
-            String    tslaString = mx.getTarget().toString();
-            setPort(tslaString);
+        String    tslaString = mx.getTarget().toString();
+           setPort(tslaString);
         }
 //        System.out.println("tslaString ist nachher: " + tslaString);
-        //       return tslaString;
+ //       return tslaString;
     }
 
-    public void printTLSAMxRecord(String hostName) throws IOException {
+    public void printTLSAMxRecord(String hostName) throws IOException, DNSSEC.DNSSECException {
         System.out.println("1");
         convertToMXRecord(hostName);
-        //       setPort(s);
+ //       setPort(s);
         System.out.println("2");
-        //       convertToMXRecord(hostName);
-        //  setPort();
+ //       convertToMXRecord(hostName);
+      //  setPort();
 
     }
 
-    private void setPort(String tslaString) throws IOException {
+    private void setPort(String tslaString) throws IOException, DNSSEC.DNSSECException {
         String target25 = "_25._tcp.";
         target25 += tslaString;
         System.out.println("==================================== MX RECORDS TLSA CHECK SMTP PORT 25 PROTOCOL TCP ====================================");
@@ -139,10 +136,10 @@ public class TLSARecord {
         checkTLSA(target587);
     }
 
-    public InterfaceMessage checkTLSAFQDN (String hostname) throws IOException {
+    public AbstractMessage checkTLSAFQDN (String hostname) throws IOException, DNSSEC.DNSSECException {
         String target = "_443._tcp.";
         target += hostname;
-        return checkTLSA(target);
+       return checkTLSA(target);
     }
 
     private void disableWarning(){

@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.security.interfaces.DSAPublicKey;
 import java.security.interfaces.ECPublicKey;
 import java.security.interfaces.RSAPublicKey;
+import java.util.List;
 
 public class DNSSECRecord {
 
@@ -13,139 +14,148 @@ public class DNSSECRecord {
     private int type = 1;
     private int dclass = 1;
 
-    public InterfaceMessage getDNSSECRecord(String hostname, int type) throws IOException {
+    public AbstractMessage checkDNSSEC(String hostname, int type) throws IOException, DNSSEC.DNSSECException {
         disableWarning();
 
         SimpleResolver res = new SimpleResolver();
-        //TestingResolver resTest = new TestingResolver();
+        //TestingResolver res = new TestingResolver();
 
         name = Name.fromString(hostname, Name.root);
         res.setEDNS(0, 0, 32768, null);
         Record dnssecKey = Record.newRecord(name, type, dclass);
-        InterfaceMessage queryDNSSEC = new TypeMessage(Message.newQuery(dnssecKey));
+        AbstractMessage queryDNSSEC = new DNSMessage(Message.newQuery(dnssecKey));
 
-        //Message responseDNSSECTest = res.send(query, type, hostname);
-        InterfaceMessage responseDNSSEC = new TypeMessage( res.send(queryDNSSEC.toXbillMessage()) );
+        //Message response = res.send(query, type, hostname);
+        AbstractMessage responseDNSSEC = new DNSMessage( res.send(queryDNSSEC.toXbillMessage()) );
 
         return responseDNSSEC;
 
     }
 
-    private void printSecurityRating(InterfaceMessage response) throws DNSSEC.DNSSECException {
+    private void printSecurityRating(AbstractMessage response) throws DNSSEC.DNSSECException {
         Record[] sect1 = response.getSectionArray(1);
         if (null != sect1) {
-            for (Record r : sect1) {
-                if (r instanceof DNSKEYRecord) {
+            for (int i = 0; i < sect1.length; i++) {
+                Record r = sect1[i];
+                if(r instanceof DNSKEYRecord) {
                     DNSKEYRecord dnskey = (DNSKEYRecord) r;
                     int keysize;
                     System.out.println(" ===============    Security Rating   ===============");
                     switch (dnskey.getAlgorithm()) {
                         case DNSSEC.Algorithm.RSAMD5:
                             keysize = ((RSAPublicKey) dnskey.getPublicKey()).getModulus().bitLength();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("RSA MD5");
                             System.out.println("Rating: *");
                             System.out.println("Hint: Don't use MD5, it's not longer secure");
                             break;
                         case DNSSEC.Algorithm.RSASHA1:
                             keysize = ((RSAPublicKey) dnskey.getPublicKey()).getModulus().bitLength();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("RSA SHA1");
                             System.out.println("Rating: *");
                             System.out.println("Hint: Don't use SHA1, it's not longer secure");
                             break;
                         case DNSSEC.Algorithm.RSASHA256:
                             keysize = ((RSAPublicKey) dnskey.getPublicKey()).getModulus().bitLength();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("RSA SHA256");
-                            if (keysize >= 2048) {
-                                if (keysize >= 3072) {
+                            if(keysize >= 2048){
+                                if(keysize>= 3072){
                                     System.out.println("Rating: ***");
                                     System.out.println("Hint: Strong Security");
-                                } else {
+                                }
+                                else{
                                     System.out.println("Rating: **");
                                     System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit RSA, but for now that's fine. Acceptable until 2030");
                                 }
-                            } else {
+                            }
+                            else{
                                 System.out.println("Rating: *");
                                 System.out.println("Hint: Less than 2048 Bits RSA is not secure enough!");
                             }
                             break;
                         case DNSSEC.Algorithm.RSASHA512:
                             keysize = ((RSAPublicKey) dnskey.getPublicKey()).getModulus().bitLength();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("RSA SHA512");
-                            if (keysize >= 2048) {
-                                if (keysize >= 3072) {
+                            if(keysize >= 2048){
+                                if(keysize>= 3072){
                                     System.out.println("Rating: ***");
                                     System.out.println("Hint: Strong Security");
-                                } else {
+                                }
+                                else{
                                     System.out.println("Rating: **");
                                     System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit RSA, but for now that's fine. Acceptable until 2030");
                                 }
-                            } else {
+                          }
+                            else{
                                 System.out.println("Rating: *");
                                 System.out.println("Hint: Less than 2048 Bits RSA is not secure enough and so is SHA512 not helpful!");
                             }
                             break;
                         case DNSSEC.Algorithm.RSA_NSEC3_SHA1:
                             keysize = ((RSAPublicKey) dnskey.getPublicKey()).getModulus().bitLength();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("RSA NSEC3 SHA1");
                             System.out.println("Rating: *");
                             System.out.println("Hint: Don't use SHA1, it's not longer secure");
                             break;
                         case DNSSEC.Algorithm.DSA:
                             keysize = ((RSAPublicKey) dnskey.getPublicKey()).getModulus().bitLength();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("DSA");
-                            if (keysize >= 2048) {
-                                if (keysize >= 3072) {
+                            if(keysize >= 2048){
+                                if(keysize>= 3072){
                                     System.out.println("Rating: ***");
                                     System.out.println("Hint: Strong Security");
-                                } else {
+                                }
+                                else{
                                     System.out.println("Rating: **");
                                     System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit DSA, but for now that's fine. Acceptable until 2030");
                                 }
-                            } else {
+                           }
+                            else{
                                 System.out.println("Rating: *");
                                 System.out.println("Hint: Less than 2048 Bits DSA is not secure enough!");
                             }
                             break;
                         case DNSSEC.Algorithm.DSA_NSEC3_SHA1:
                             keysize = ((DSAPublicKey) dnskey.getPublicKey()).getParams().getP().bitLength();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("DSA NSEC3 SHA1");
                             System.out.println("Rating: *");
                             System.out.println("Hint: Don't use SHA1, it's not longer secure");
                             break;
                         case DNSSEC.Algorithm.ECDSAP256SHA256:
                             keysize = ((ECPublicKey) dnskey.getPublicKey()).getParams().getCurve().getField().getFieldSize();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("ECDSAP256 SHA256");
                             System.out.println("Rating: ***");
                             System.out.println("Hint: Strong Security");
                             break;
                         case DNSSEC.Algorithm.ECDSAP384SHA384:
                             keysize = ((ECPublicKey) dnskey.getPublicKey()).getParams().getCurve().getField().getFieldSize();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("ECDSAP384 SHA386");
                             System.out.println("Rating: ***");
                             System.out.println("Hint: Strong Security");
                             break;
                         case DNSSEC.Algorithm.DH:
                             keysize = ((RSAPublicKey) dnskey.getPublicKey()).getModulus().bitLength();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("DH");
-                            if (keysize >= 2048) {
-                                if (keysize >= 3072) {
+                            if(keysize >= 2048){
+                                if(keysize>= 3072){
                                     System.out.println("Rating: ***");
                                     System.out.println("Hint: Strong Security");
-                                } else {
+                                }
+                                else{
                                     System.out.println("Rating: **");
                                     System.out.println("Hint: If you want a signature you can trust for 30 years or more, you might want to use something stronger than 2048-bit DH, but for now that's fine. Acceptable until 2030");
                                 }
-                            } else {
+                            }
+                            else{
                                 System.out.println("Rating: *");
                                 System.out.println("Hint: Less than 2048 Bits DH is not secure enough!");
                             }
@@ -155,21 +165,21 @@ public class DNSSECRecord {
                             break;
                         case DNSSEC.Algorithm.ECC_GOST:
                             keysize = ((ECPublicKey) dnskey.getPublicKey()).getParams().getCurve().getField().getFieldSize();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("ECC GOST");
                             System.out.println("Rating: ***");
                             System.out.println("Hint: Strong Security!");
                             break;
                         case DNSSEC.Algorithm.PRIVATEDNS:
                             keysize = ((ECPublicKey) dnskey.getPublicKey()).getParams().getCurve().getField().getFieldSize();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("PRIVATE EDNS");
                             System.out.println("Rating: *");
                             System.out.println("Hint: Weak Security");
                             break;
                         case DNSSEC.Algorithm.PRIVATEOID:
                             keysize = ((ECPublicKey) dnskey.getPublicKey()).getParams().getCurve().getField().getFieldSize();
-                            System.out.println("Key size:   " + keysize + " Bits");
+                            System.out.println("Key size:   " +keysize + " Bits");
                             System.out.println("PRIVATE OID");
                             System.out.println("Rating: *");
                             System.out.println("Hint: Weak Security");
@@ -181,7 +191,7 @@ public class DNSSECRecord {
         }
     }
 
-    public void printDNSSECRecordSections(InterfaceMessage message) throws DNSSEC.DNSSECException {
+    public void printDNSSECRecordSections(AbstractMessage message) throws DNSSEC.DNSSECException {
         Record[] sect1 = message.getSectionArray(1);if(null != sect1){
             for(int i = 0; i < sect1.length; i++){
                 Record r = sect1[i];

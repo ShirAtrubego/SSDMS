@@ -2,10 +2,10 @@ package main.SingeObjects;
 
 import org.xbill.DNS.*;
 
-public class TypeMessage implements InterfaceMessage {
+public class DNSMessage implements AbstractMessage {
     private Message internalMessage;
 
-    public TypeMessage(Message message){
+    public DNSMessage(Message message){
         internalMessage = message;
     }
 

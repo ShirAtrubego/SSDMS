@@ -2,7 +2,7 @@ package main.SingeObjects;
 
 import org.xbill.DNS.*;
 
-public interface InterfaceLookup {
+public interface AbstractLookup {
 
         void  setResolver(Resolver resolver);
 
@@ -28,5 +28,4 @@ public interface InterfaceLookup {
         String getErrorString();
 
     }
-
 

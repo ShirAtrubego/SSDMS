@@ -20,15 +20,15 @@ public class SecurityCheck {
     }
 
     public InterfaceMessage check(String hostname, int type) throws IOException {
-        SimpleResolver res = new SimpleResolver();
-        //TestingResolver res = new TestingResolver();
+        SimpleResolver res = new SimpleResolver(); //Internet Abfrage
+        //TestingResolver res = new TestingResolver(); //Lokale Abfrage fürs Testen
         name = InterfaceName.fromString(hostname, Name.root);
         if (type == 1 || type == 48) {
             res.setEDNS(0, 0, 32768, null);
         }
         Record rec = Record.newRecord(name, type, dclass);
         Message query = Message.newQuery(rec);
-        return new TypeMessage(res.send(query));
-        //return new TypeMessage(res.send(query, type, hostname));
+        return new TypeMessage(res.send(query)); //SimpleResolver
+        //return new TypeMessage(res.send(query, type, hostname)); // TestingResolver
     }
 }

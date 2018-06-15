@@ -2,7 +2,7 @@ package main.SingeObjects;
 
 import org.xbill.DNS.*;
 
-public interface InterfaceMessage {
+public interface AbstractMessage {
 
     /**
      * Replaces the Header with a new one.
@@ -87,7 +87,7 @@ public interface InterfaceMessage {
      * @see Record
      * @see Section
      */
-    Record [] getSectionArray(int section);
+    Record[] getSectionArray(int section);
 
     /**
      * Returns an array containing all records in the given section grouped into
@@ -95,7 +95,7 @@ public interface InterfaceMessage {
      * @see RRset
      * @see Section
      */
-    RRset [] getSectionRRsets(int section);
+    RRset[] getSectionRRsets(int section);
 
 
     /**
